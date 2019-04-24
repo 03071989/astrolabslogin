@@ -56,7 +56,7 @@ function getDashboard(){
       }
     }).then(response => {
       if (!response.ok){
-        reject(new Error("Unathaurized"));
+        reject(new Error("Unauthorized"));
         return;
       }
       response.json().then(json => {
