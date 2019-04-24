@@ -25,7 +25,7 @@ function loginRequest({email, password}){
 
 function registerRequest({email, password,name}){
   return new Promise((resolve, reject) => {
-    fetch("https://astrolabsbackend3.herokuapp.com/users/login", {
+    fetch("https://astrolabsbackend3.herokuapp.com/users/register", {
       method: "post",
       headers: {
         "Content-Type": "application/json; charset=utf-8"
@@ -50,7 +50,7 @@ function registerRequest({email, password,name}){
 
 function getDashboard(){
   return new Promise((resolve, reject) => {
-    fetch("https://astrolabsbackend3.herokuapp.com/users/login", {
+    fetch("https://astrolabsbackend3.herokuapp.com/dashboard", {
       headers: {
        'Authorization': getToken() 
       }
